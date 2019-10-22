@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 
 //Importing my components 
 import Header from "./Header"
+import Article from "./Article"
 
 //Importing data - Remove this once the backend is working. 
 // import HK from "./hk.json"
@@ -69,6 +70,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <h2>Hello Beautiful </h2>
+        <Article {...articleData} />
         
       </div>
     )
