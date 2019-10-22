@@ -1,8 +1,12 @@
 // bring in React and Component instance from React
 import React, { Component } from "react";
 
+//importing JSON. Remove this once the backend is finished 
+
 // define our Hello component
 class Header extends Component {
+  
+
   // what should the component render
   render() {
     // Make sure to return some UI
