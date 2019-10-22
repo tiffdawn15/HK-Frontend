@@ -75,7 +75,7 @@ const Wrapper = styled.section`
 class App extends Component {
   constructor(props) {
     super(props);
-    this.setState = {
+    this.State = {
       articles: [],
     }
   }
@@ -87,20 +87,19 @@ class App extends Component {
       "https://hongkong34.herokuapp.com/"
     )
       .then(res => res.json())
-      .then(data => this.setState({articles: data.articles}))
+      .then(data => this.setState({articles: data}))
   }
       // .catch(err => console.log(err));
       
   
-
-
+      
 render() {
-
-
+ 
   // const articleJSX = this.state.articles
   // .map((articleData, i) => (
   //   <Article {...articleData} />
   // ))
+    
   
 
   return (
@@ -109,7 +108,10 @@ render() {
 
         <Header />
 
-        <Route
+        
+
+
+        {/* <Route
 
           path="/"
           exact
@@ -123,8 +125,8 @@ render() {
               );
             });
           }}
-        />
-
+        /> */}
+      
 
 
         {/* {articleJSX} */}
