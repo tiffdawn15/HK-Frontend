@@ -75,13 +75,18 @@ render() {
   return (
     <Wrapper>
       <div className="App">
+     
         <Switch>
         <Header />
-        <Route path="/" exact render={props => <Home {...this.state}  handleRefresh={this.fetchData}/>}/>
-        <Route path="/help" exact render={props => <Help handleRefresh={this.fetchData}/>}/>
+        
         </Switch>
 
-        <Home {...this.state}/>
+
+        <main>
+        <Route path="/" exact render={state => <Home {...this.state}  handleRefresh={this.fetchData}/>}/>
+        <Route path="/help" render component={Help}/>
+
+        </main>
 
 
        

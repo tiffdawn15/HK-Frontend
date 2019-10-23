@@ -1,13 +1,12 @@
 // bring in React and Component instance from React
 import React, { Component } from "react";
 import styled, { ThemeProvider } from 'styled-components';
+import { Router, Route, Switch,  } from "react-router";
+
+import {  Link } from "react-router-dom";
 
 
-import { BrowserRouter as Link } from "react-router-dom";
 
-//importing JSON. Remove this once the backend is finished 
-
-// define our Hello component
 
 //Adding styling for Nav bar. 
 
@@ -16,7 +15,7 @@ const UL = styled.ul`
   justify-content: center;
 `
 
-const LI = styled.li`
+const li = styled.li`
    list-style-type: none;
    margin: 0;
    padding: 10px;
@@ -41,18 +40,18 @@ class Header extends Component {
 
          
         
-            <UL>
+            <ul>
               <Link to="/">
-                <LI>Home</LI>
+                <li>Home</li>
               </Link>
               <Link to="/help">
-                <LI>Help</LI>
+                <li>Help</li>
               </Link>
               <Link to="/sign-up">
-                <LI>Sign Up</LI>
+                <li>Sign Up</li>
               </Link>
 
-            </UL>
+            </ul>
          
           </nav>
 
@@ -66,3 +65,5 @@ class Header extends Component {
 
 export default Header;
 
+//Don't need an anchor tab 
+//Need to pass Props down. 
