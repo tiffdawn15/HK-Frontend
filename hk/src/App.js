@@ -53,7 +53,7 @@ import Article from "./Article"
 //   "url": "https://www.spiegel.de/politik/ausland/hongkong-regierung-nutzt-notstandsgesetz-fuer-vermummungsverbot-a-1289929.html",
 //   "urlToImage": "https://cdn1.spiegel.de/images/image-1475883-860_poster_16x9-tflx-1475883.jpg",
 //   "publishedAt": "2019-10-04T08:26:39Z",
-//   "content": "Freitag, 04.10.2019  \r\n10:26 Uhr\r\nDie Proteste in Hongkong reißen nicht ab. Nun bemüht Regierungschefin Carrie Lam ein Notstandsgesetz aus der britischen Kolonialzeit, um härter gegen die Demonstranten vorzugehen.\r\nWie Lam mitteilte, wurde ein Vermummungsverb… [+2979 chars]"
+//   "content": "Freitag, 04.10.2019  \r\n10:26 Uhr\r\nDie Proteste in Hongkong reißen nicht ab. Nun bemüht Regierungschefin Carrie Lam ein Notstandsgesetz aus der britischen Kolonialzeit, um härter gegen die Demonstranten vorzugehen.\r\nWie Lam mitteilte, wurde ein Vermummungsverb… [+2979 chars]"
 // }
 
 
@@ -75,30 +75,37 @@ const Wrapper = styled.section`
 class App extends Component {
   constructor(props) {
     super(props);
+
     this.State = {
       articles: [],
+      loading: true,
+      error: null
     }
   }
 
 
   componentDidMount() {
-    let articleData = [];
-    fetch(
-      "https://hongkong34.herokuapp.com/"
-    )
-      .then(res => res.json())
-      .then(data => this.setState({articles: data}))
+    this.fetchData()
   }
-      // .catch(err => console.log(err));
-      
+  
+
+  fetchData = () => {
+      fetch("https://hongkong34.herokuapp.com/")
+      .then((res) => { return res.json()})
+      .then((articles)  => this.setState({ articles, loading: false }))
+      .then((error) => this.setState({ error, loading: false }))
+      .then(err => console.log(err))
+
+  }
+  
+
+     
   
       
 render() {
  
-  // const articleJSX = this.state.articles
-  // .map((articleData, i) => (
-  //   <Article {...articleData} />
-  // ))
+
+  
     
   
 
@@ -108,11 +115,12 @@ render() {
 
         <Header />
 
+       <Article {...this.state}/>
+
         
 
 
         {/* <Route
-
           path="/"
           exact
           render={() => {
@@ -120,7 +128,6 @@ render() {
               return (
                 <Link to={"/" + article._id} key={i}>
                   <Article {...article} key={i} />
-
                 </Link>
               );
             });
@@ -143,5 +150,3 @@ render() {
 
 
 export default App;
-
-

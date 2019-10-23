@@ -10,29 +10,22 @@ class Article extends Component {
 
     // const {author, title, urlToImage, content} = article
     // const {description, urlToImage, content} = this.props
-    if (this.props.render) {
 
 
 
-      // Make sure to return some UI
-      return (
 
+    // Make sure to return some UI
+    return (
 
+      <div>
+        <h1>Hello Beautiful </h1>
+      </div>
 
-        <div className="Article">
-         <h1> {this.props.title} </h1> 
-          
-          <img className="article-photo" src={this.props["urlToImage"]} alt={this.props.title} /> 
-          <p> {this.props.content}</p>
+    )
 
-        </div>
-      )
-
-
-    }
 
   }
 }
 
-export default Article;
+  export default Article;
 
