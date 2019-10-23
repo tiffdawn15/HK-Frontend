@@ -19,4 +19,23 @@ Tuesday:
 
 
 
-N
+Wednesday - To Do at HOme: 
+- Do more research on upcoming rallies and add it to the help section 
+- Products to boycott 
+
+
+What I want to do this afternoon: 
+- Update the news articles with Enlish only articles. 
+
+
+To finish the project: 
+- Design work
+    - Make a div to show the seperations of articles 
+    - Add a cool font 
+    - Hover effects over the Nav bar. 
+    - Look into adding Login capability 
+
+
+
+Thursday Mornign: 
+- Deploy sight 
