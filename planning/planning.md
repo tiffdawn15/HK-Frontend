@@ -12,8 +12,10 @@ Questions:
 Tuesday: 
 - Morning: 
     - Try to finish db and get it on Mongo Atlas 
+            - Update: Done did it 
 - Afternoon: 
     - Hello styled components! I would like it if you made my shit pretty. 
+      -   Update:  This was ignored for getting the fetch to work. I got stuck trying to get the props for articles to load. It shows everthing in the props, but not in 
 
 
 

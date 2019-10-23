@@ -9,23 +9,22 @@ class ArticleList extends Component {
   // what should the component render
 
   render() {
+    
 
     return (
 
-      // <div>
-      //   <h1> Hey sexy</h1>
-      // </div>
-      //Article List is mapping through the data and sending it to the Article Component
      
-         // <div className="article-list">
-        //         { this.props.articles.map( (article, index) => {
-        //     return <Article
-        //               key={index} 
-        //               {...article}
-        //               handleRefresh={this.props.handleRefresh}
-        //               />
-        //     })}
-        // </div>
+      // Article List is mapping through the data and sending it to the Article Component
+     
+         <div className="article-list">
+                { this.props.articles.map( (article, index) => {
+            return <Article
+                      key={index} 
+                      {...article}
+                      handleRefresh={this.props.handleRefresh}
+                      />
+            })}
+        </div>
       
 
     )

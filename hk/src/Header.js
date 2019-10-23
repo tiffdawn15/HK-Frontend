@@ -2,6 +2,9 @@
 import React, { Component } from "react";
 import styled, { ThemeProvider } from 'styled-components';
 
+
+import { BrowserRouter as Link } from "react-router-dom";
+
 //importing JSON. Remove this once the backend is finished 
 
 // define our Hello component
@@ -32,18 +35,28 @@ class Header extends Component {
     return (
       <div className="Header">
         <h1>Stand with Hong Kong </h1>
-        <div className="nav-bar">
-      
-            <nav>
-
-            </nav>
-            <UL>
-              <LI>Home</LI>
-              <LI>Help</LI>
-              <LI>Sign Up</LI>
-            </UL>
         
-        </div>
+
+          <nav>
+
+         
+        
+            <UL>
+              <Link to="/">
+                <LI>Home</LI>
+              </Link>
+              <Link to="/help">
+                <LI>Help</LI>
+              </Link>
+              <Link to="/sign-up">
+                <LI>Sign Up</LI>
+              </Link>
+
+            </UL>
+         
+          </nav>
+
+       
       </div>
     )
 
@@ -53,5 +66,3 @@ class Header extends Component {
 
 export default Header;
 
-// To do for this component: 
-// Add Routes for the nav bar 

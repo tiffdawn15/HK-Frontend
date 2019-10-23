@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 
 import styled, { ThemeProvider } from 'styled-components';
-import { Router, Route, Switch, } from "react-router";
+import { Router, Route, Switch,  } from "react-router";
 import { BrowserRouter as Link } from "react-router-dom";
+
 
 
 
 //Importing my components 
 import Header from "./Header"
 import ArticleList from "./ArticleList"
+import Home from "./Home"
+import Help from "./Help"
 
 
 
@@ -24,6 +27,10 @@ const Wrapper = styled.section`
   justify-content: center;
   margin: 0 auto;
   text-align: center;
+  background-color: #DE2810;
+  color:#FFFFFD;
+
+
 `
 
 
@@ -32,7 +39,7 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.State = {
+    this.state = {
       articles: [],
       loading: true,
       error: null
@@ -68,32 +75,18 @@ render() {
   return (
     <Wrapper>
       <div className="App">
-
+        <Switch>
         <Header />
+        <Route path="/" exact render={props => <Home {...this.state}  handleRefresh={this.fetchData}/>}/>
+        <Route path="/help" exact render={props => <Help handleRefresh={this.fetchData}/>}/>
+        </Switch>
 
-       <ArticleList {...this.state}/>
+        <Home {...this.state}/>
+
+
+       
 
         
-
-
-        {/* <Route
-          path="/"
-          exact
-          render={() => {
-            return this.state.articles.map((article, i) => {
-              return (
-                <Link to={"/" + article._id} key={i}>
-                  <Article {...article} key={i} />
-                </Link>
-              );
-            });
-          }}
-        /> */}
-      
-
-
-        {/* {articleJSX} */}
-
 
 
 
