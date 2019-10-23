@@ -1,4 +1,3 @@
-// bring in React and Component instance from React
 import React, { Component } from "react";
 
 
@@ -8,18 +7,18 @@ class Article extends Component {
 
   render() {
 
-    // const {author, title, urlToImage, content} = article
-    // const {description, urlToImage, content} = this.props
-
-
-
-
-    // Make sure to return some UI
+   
     return (
 
-      <div>
-        <h1>Hello Beautiful </h1>
-      </div>
+     
+        <div>
+           
+            <h2>{this.props.title}</h2>
+           
+            <p>{this.props.content}</p>
+               
+        </div>
+      
 
     )
 
@@ -29,3 +28,7 @@ class Article extends Component {
 
   export default Article;
 
+
+ 
+
+  
