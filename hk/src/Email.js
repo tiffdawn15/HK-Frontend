@@ -1,6 +1,22 @@
 // // bring in React and Component instance from React
 import React, { Component } from "react";
 import emailjs from 'emailjs-com';
+import styled, { ThemeProvider } from 'styled-components';
+
+
+
+const Wrapper = styled.section`
+    min-height: 100vh;
+`
+const H1 = styled.h1`
+    font-size: 36px;
+`
+
+const Div = styled.div `
+    margin: 50px;
+    padding: 0px 80px;
+`
+
 
 // // define our Hello component
 class Email extends Component {
@@ -35,9 +51,13 @@ class Email extends Component {
 
     render() {
         return (
+
             <form className="test-mailing">
-                <h1>Let's see if it works</h1>
-                <div>
+                <Wrapper>
+                <H1>Contact Us:</H1>
+
+                <Div>
+                
                     <textarea
                         id="test-mailing"
                         name="test-mailing"
@@ -47,8 +67,10 @@ class Email extends Component {
                         value={this.state.feedback}
                         style={{ width: '100%', height: '150px' }}
                     />
-                </div>
+                   
+                </Div>
                 <input type="button" value="Submit" className="btn btn--submit" onClick={this.handleSubmit} />
+                </Wrapper>
             </form>
 
 

@@ -2,20 +2,20 @@ import React, { Component } from "react";
 import styled, { ThemeProvider } from 'styled-components';
 
 
-const Div = styled.div`
-     
-    `
+//Styled sections. 
 
 const Wrapper = styled.section`
-       height: 200px; 
+       
     padding: 20px 20px 0px;
     
     justify-content: left;
 
     border: 2px solid;
-     padding: 20px 20px 10px;
-     margin: 50px 50px 0px; 
+    border-radius: 25px;
+     padding: 20px 20px 20px;
+     margin: 50px 100px 0px; 
      display: flex;
+     font-family: 'Dosis', sans-serif;
     
      
 `
@@ -31,16 +31,20 @@ const Img= styled.img`
     justify-content: right;
     height: 200px;
     border-radius: 5px;
-    width: 200px;
+    max-width: 350px;
     
  
 `
 
 const A = styled.a` 
     font-size: 30px;
-    color: #097280;
+    color: #4FB0B7;
 `
 
+const P = styled.p`
+    font-size: 18px;
+    padding: 10px;
+`
 
 
 
@@ -56,7 +60,7 @@ class Article extends Component {
     return (
 
      
-        <Div>
+        <div>
            
             {/* I want the image to float left of the title and content */}
             <Wrapper> 
@@ -65,7 +69,7 @@ class Article extends Component {
             <Editorial>
             
             <A href={this.props.url}>{this.props.title}</ A>
-            <p>{this.props.content}</p>
+            <P>{this.props.content}</P>
             
             
                
@@ -73,7 +77,7 @@ class Article extends Component {
             </Editorial>  
             </Wrapper>
            
-        </Div>
+        </div>
       
 
     )

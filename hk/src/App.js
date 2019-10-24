@@ -9,7 +9,6 @@ import { BrowserRouter as Link } from "react-router-dom";
 
 //Importing my components 
 import Header from "./Header"
-import ArticleList from "./ArticleList"
 import Home from "./Home"
 import Help from "./Help"
 import Email from "./Email"
@@ -23,7 +22,7 @@ const Wrapper = styled.section`
   justify-content: center;
   margin: 0 auto;
   text-align: center;
-  background-color: #801709;
+  background-color: #171018;
   color:#FFFFFD;
   height: 100%;
 
@@ -72,9 +71,9 @@ render() {
   return (
     <Wrapper>
       <div className="App">
-     
+      <Header />
         <Switch>
-        <Header />
+        
         
         </Switch>
 

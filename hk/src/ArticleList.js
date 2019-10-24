@@ -1,8 +1,12 @@
 // bring in React and Component instance from React
 import React, { Component } from "react";
+import styled, { ThemeProvider } from 'styled-components';
 
-
+//Other Component 
 import Article from "./Article"
+
+
+//Start styling here 
 
 // define our Hello component
 class ArticleList extends Component {
