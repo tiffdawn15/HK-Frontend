@@ -5,6 +5,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "emailjs-com": "^2.4.0",
+    "netlify": "^2.4.8",
+    "netlify-cli": "^2.19.3",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-router": "^5.1.2",
