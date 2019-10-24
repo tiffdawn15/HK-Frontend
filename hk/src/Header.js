@@ -1,7 +1,7 @@
 // bring in React and Component instance from React
 import React, { Component } from "react";
 import styled, { ThemeProvider } from 'styled-components';
-import { Router, Route, Switch, } from "react-router";
+
 
 import { Link } from "react-router-dom";
 
