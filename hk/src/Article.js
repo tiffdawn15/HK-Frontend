@@ -68,7 +68,7 @@ class Article extends Component {
             <Img src={this.props.urlToImage} alt="article-photo"></Img>
             <Editorial>
             
-            <A href={this.props.url}>{this.props.title}</ A>
+            <A href={this.props.url} target="_blank">{this.props.title}</ A>
             <P>{this.props.content}</P>
             
             
