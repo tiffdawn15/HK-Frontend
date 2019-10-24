@@ -12,11 +12,7 @@ import Header from "./Header"
 import ArticleList from "./ArticleList"
 import Home from "./Home"
 import Help from "./Help"
-
-
-
-
-
+import Email from "./Email"
 
 
 
@@ -27,8 +23,9 @@ const Wrapper = styled.section`
   justify-content: center;
   margin: 0 auto;
   text-align: center;
-  background-color: #DE2810;
+  background-color: #801709;
   color:#FFFFFD;
+  height: 100%;
 
 
 `
@@ -85,6 +82,7 @@ render() {
         <main>
         <Route path="/" exact render={state => <Home {...this.state}  handleRefresh={this.fetchData}/>}/>
         <Route path="/help" render component={Help}/>
+        <Route path="/contact" render component={Email} />
 
         </main>
 

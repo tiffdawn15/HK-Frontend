@@ -24,8 +24,7 @@ Wednesday - To Do at HOme:
 - Products to boycott 
 
 
-What I want to do this afternoon: 
-- Update the news articles with Enlish only articles. 
+
 
 
 To finish the project: 
