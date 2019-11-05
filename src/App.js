@@ -22,7 +22,7 @@ const Wrapper = styled.section`
   justify-content: center;
   margin: 0 auto;
   text-align: center;
-  background-color: #171018;
+  background-color: #231D1F;
   color:#FFFFFD;
   height: 100%;
 
@@ -81,7 +81,7 @@ render() {
         <main>
         <Route path="/" exact render={state => <Home {...this.state}  handleRefresh={this.fetchData}/>}/>
         <Route path="/help" render component={Help}/>
-        <Route path="/contact" render component={Email} />
+        
 
         </main>
 

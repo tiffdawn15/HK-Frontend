@@ -19,6 +19,8 @@ const Wrapper = styled.section`
   align-items: center;
   min-width: 100vw;
   padding: 0px 0px;
+  color:white;
+  text-decoration:none;
 `
 
 
@@ -35,7 +37,7 @@ const Img = styled.img`
   `
 const UL = styled.ul`
 display: flex;
-
+color:white;
 padding: 20px;
 
 
@@ -47,7 +49,7 @@ const Li = styled.li`
    flex-direction: row;
    color: white;
    font-size: 26px;
-  
+    
   
   
 
@@ -77,9 +79,7 @@ class Header extends Component {
               <Link to="/help">
                 <Li>Help</Li>
               </Link>
-              <Link to="/contact">
-                <Li>Contact</Li>
-              </Link>
+             
 
             </UL>
 
